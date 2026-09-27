@@ -53,3 +53,11 @@ updateHeader();
 document.querySelectorAll('a[data-placeholder]').forEach((link) => {
   link.addEventListener('click', (event) => event.preventDefault());
 });
+
+// Show the highest-rated Google reviews first.
+const reviewList = document.querySelector('.review-list');
+if (reviewList) {
+  [...reviewList.querySelectorAll('.review-card')]
+    .sort((a, b) => Number(b.dataset.rating) - Number(a.dataset.rating))
+    .forEach((card) => reviewList.appendChild(card));
+}
