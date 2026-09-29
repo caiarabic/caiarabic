@@ -118,8 +118,15 @@ h1 em,h2 em{color:var(--terracotta);font-style:italic}
 .courses{background:var(--paper)}
 .section-heading{align-items:end;margin-bottom:64px}
 .section-heading>p,.work-head>p{color:var(--muted);font-size:15px;margin:0 0 8px;max-width:340px}
-.course-grid{display:grid;gap:22px;grid-template-columns:repeat(4,1fr)}
-.course-card.featured{grid-column:span 2}
+.course-grid{display:flex;flex-wrap:wrap;gap:22px}
+.course-card{flex:1 1 190px}
+.course-card.featured{box-shadow:0 30px 60px -32px rgba(28,49,96,.7);flex:1 1 calc(50% - 11px)}
+.course-card:not(.featured) h3{font-size:22px}
+.course-card:not(.featured){padding-left:22px;padding-right:22px}
+.course-badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 0}
+.course-badges span{border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.08em;padding:5px 12px;text-transform:uppercase}
+.badge-best{background:var(--saffron);color:var(--night)}
+.course-badges .badge-ar{border:1px solid var(--saffron);color:var(--saffron);font-size:14px;font-weight:700;letter-spacing:0;line-height:1.2;padding:3px 12px;text-transform:none}
 .course-card{background:var(--sand);border:1px solid var(--line);border-radius:200px 200px 16px 16px;display:flex;flex-direction:column;min-height:390px;overflow:hidden;padding:44px 30px 26px;position:relative;transition:transform .3s,box-shadow .3s,background .3s}
 .course-card:hover{background:#fff;box-shadow:0 26px 50px -30px rgba(16,26,51,.45);transform:translateY(-8px)}
 .course-ar{align-self:center;color:var(--lapis);font-family:var(--calli);font-size:40px;line-height:1.35;margin-bottom:10px;opacity:.28;white-space:nowrap}
@@ -338,7 +345,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--saffron);outline-of
 @media (max-width:1080px){
   .brand-ar{display:none}
   .main-nav{gap:24px}
-  .course-grid{grid-template-columns:repeat(2,1fr)}
   .project-grid,.training-list{grid-template-columns:repeat(3,1fr)}
   .reviews-layout{grid-template-columns:1fr}
   .rating-card{position:static}
@@ -367,7 +373,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--saffron);outline-of
   .stat strong{font-size:46px}
   .section-heading{margin-bottom:44px}
   .section-heading>p,.work-head>p{margin-top:22px}
-  .course-grid,.project-grid,.training-list{grid-template-columns:repeat(2,1fr)}
+  .project-grid,.training-list{grid-template-columns:repeat(2,1fr)}
   .course-card{min-height:360px;padding:40px 22px 22px}
   .course-card h3{font-size:24px}
   .quote{padding-top:80px}
@@ -391,9 +397,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--saffron);outline-of
 @media (max-width:520px){
   .hero h1{font-size:52px}
   .verb-cycle{margin-top:44px}
-  .course-grid,.service-list,.project-grid,.training-list{grid-template-columns:1fr}
+  .service-list,.project-grid,.training-list{grid-template-columns:1fr}
+  .course-card,.course-card.featured{flex-basis:100%}
   .review-list{columns:1}
-  .course-card.featured{grid-column:auto}
   .vision-card{border-radius:160px 160px 18px 18px}
   .mission-list li{padding:20px;gap:14px}
   .review-card blockquote{font-size:17px}
