@@ -222,6 +222,13 @@ address{color:var(--muted-dark);font-size:13px;font-style:normal;margin-top:10px
 .footer-credit{border-bottom:1px solid var(--line-dark);color:var(--sand);transition:color .2s,border-color .2s}
 .footer-credit:hover{border-color:var(--saffron);color:var(--saffron)}
 
+/* About: Arabic infographic */
+.glance{margin:96px 0 0}
+.glance-image{background:#e2f1f4;border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 60px -40px rgba(16,26,51,.5);display:block;overflow:hidden;position:relative}
+.glance-image img{display:block;height:auto;transition:transform .5s;width:100%}
+.glance-image:hover img{transform:scale(1.015)}
+.glance-zoom{background:rgba(16,26,51,.85);border-radius:999px;bottom:14px;color:var(--sand);font-size:12px;font-weight:600;padding:7px 14px;position:absolute;right:14px}
+
 /* About: motto */
 .motto-label{align-items:center;color:var(--terracotta);display:flex;font-size:12px;font-weight:700;gap:10px;justify-content:center;letter-spacing:.2em;margin:96px 0 24px;text-transform:uppercase}
 .motto-label+.value-row{margin-top:0}
@@ -368,6 +375,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--saffron);outline-of
   .vision-card{padding:90px 8% 48px}
   .mission{margin-top:40px}
   .motto-label{margin-top:64px}
+  .glance{margin-top:64px}
+  .glance-image{border-radius:14px}
+  .glance-zoom{bottom:8px;font-size:11px;padding:5px 10px;right:8px}
   .map-strip{grid-template-columns:1fr}
   .map-strip iframe{height:260px}
   .logo-grid{grid-template-columns:repeat(3,1fr)}
@@ -389,6 +399,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--saffron);outline-of
   .review-card blockquote{font-size:17px}
   .course-card{border-radius:160px 160px 16px 16px;min-height:330px}
     .logo-grid{gap:10px;grid-template-columns:repeat(2,1fr)}
+  .wall-title{flex-wrap:wrap;font-size:21px;row-gap:2px}
+  .wall-title [lang="ar"]{flex-basis:100%;font-size:19px;margin-left:0;padding-left:24px}
   .logo-grid li{height:86px;padding:14px}
   .brand-logo{height:52px}
   .site-footer>div{gap:14px}
